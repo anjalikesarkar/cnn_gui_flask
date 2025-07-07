@@ -35,5 +35,29 @@ A demo project combining a Convolutional Neural Network (CNN) trained on the CIF
   - The image is processed and transformed the same way as training images.
   - The model predicts the class, which is sent back as JSON to your PyQt GUI.
 
+* evaluate.py
+  -  To evaluate the trained CNN model on the CIFAR-10 test dataset.
+  -  It calculates key **classification metrics, generates CSV reports, and saves a visual confusion matrix heatmap**.
+  - Features
+    - Loads your trained PyTorch model
+    - Evaluates performance on the test_loader
+    - Calculates:Loss,Accuracy,Per-class Recall,Confusion Matrix
+    - Saves results as:
+      - summary.csv – overall loss & accuracy
+      - recall.csv – per-class recall
+      - confusion_matrix.csv – raw confusion matrix
+      - confusion_matrix_heatmap.png – color-coded heatmap image
+
+* Requirements
+  - torch
+  - torchvision
+  - torch.utils.data
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pandas
+  - numpy
+  - PIL
+
 
 
